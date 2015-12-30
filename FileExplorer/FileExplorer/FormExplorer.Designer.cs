@@ -31,10 +31,10 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FileExplorer));
             this.btnBack = new System.Windows.Forms.Button();
             this.btnForward = new System.Windows.Forms.Button();
-            this.btnStart = new System.Windows.Forms.Button();
+            this.btnOpen = new System.Windows.Forms.Button();
             this.labelSource = new System.Windows.Forms.Label();
-            this.textBox = new System.Windows.Forms.TextBox();
-            this.webBrowser1 = new System.Windows.Forms.WebBrowser();
+            this.textPath = new System.Windows.Forms.TextBox();
+            this.webBrowser = new System.Windows.Forms.WebBrowser();
             this.SuspendLayout();
             // 
             // btnBack
@@ -55,14 +55,15 @@
             this.btnForward.Text = ">>";
             this.btnForward.UseVisualStyleBackColor = true;
             // 
-            // btnStart
+            // btnOpen
             // 
-            this.btnStart.Location = new System.Drawing.Point(674, 9);
-            this.btnStart.Name = "btnStart";
-            this.btnStart.Size = new System.Drawing.Size(75, 23);
-            this.btnStart.TabIndex = 2;
-            this.btnStart.Text = "Open";
-            this.btnStart.UseVisualStyleBackColor = true;
+            this.btnOpen.Location = new System.Drawing.Point(674, 9);
+            this.btnOpen.Name = "btnOpen";
+            this.btnOpen.Size = new System.Drawing.Size(75, 23);
+            this.btnOpen.TabIndex = 2;
+            this.btnOpen.Text = "Open";
+            this.btnOpen.UseVisualStyleBackColor = true;
+            this.btnOpen.Click += new System.EventHandler(this.btnOpen_Click);
             // 
             // labelSource
             // 
@@ -73,30 +74,30 @@
             this.labelSource.TabIndex = 3;
             this.labelSource.Text = "Path";
             // 
-            // textBox
+            // textPath
             // 
-            this.textBox.Location = new System.Drawing.Point(153, 11);
-            this.textBox.Name = "textBox";
-            this.textBox.Size = new System.Drawing.Size(515, 20);
-            this.textBox.TabIndex = 4;
+            this.textPath.Location = new System.Drawing.Point(153, 11);
+            this.textPath.Name = "textPath";
+            this.textPath.Size = new System.Drawing.Size(515, 20);
+            this.textPath.TabIndex = 4;
             // 
-            // webBrowser1
+            // webBrowser
             // 
-            this.webBrowser1.Location = new System.Drawing.Point(9, 48);
-            this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
-            this.webBrowser1.Name = "webBrowser1";
-            this.webBrowser1.Size = new System.Drawing.Size(740, 299);
-            this.webBrowser1.TabIndex = 5;
+            this.webBrowser.Location = new System.Drawing.Point(9, 37);
+            this.webBrowser.MinimumSize = new System.Drawing.Size(20, 20);
+            this.webBrowser.Name = "webBrowser";
+            this.webBrowser.Size = new System.Drawing.Size(740, 310);
+            this.webBrowser.TabIndex = 5;
             // 
             // FileExplorer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(757, 359);
-            this.Controls.Add(this.webBrowser1);
-            this.Controls.Add(this.textBox);
+            this.Controls.Add(this.webBrowser);
+            this.Controls.Add(this.textPath);
             this.Controls.Add(this.labelSource);
-            this.Controls.Add(this.btnStart);
+            this.Controls.Add(this.btnOpen);
             this.Controls.Add(this.btnForward);
             this.Controls.Add(this.btnBack);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -113,10 +114,10 @@
 
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Button btnForward;
-        private System.Windows.Forms.Button btnStart;
+        private System.Windows.Forms.Button btnOpen;
         private System.Windows.Forms.Label labelSource;
-        private System.Windows.Forms.TextBox textBox;
-        private System.Windows.Forms.WebBrowser webBrowser1;
+        private System.Windows.Forms.TextBox textPath;
+        private System.Windows.Forms.WebBrowser webBrowser;
     }
 }
 
